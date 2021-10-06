@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fcfcfc;
+  --text-color: #fcfcfc;
+  --primary-color: #040404;
+  --secondary-color: purple;
+  --default-font-size: 14px;
+  --font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--default-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vh;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  flex: 0.5;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: flex ease-in 1s;
+  -webkit-transition: flex ease-in 1s;
+  -moz-transition: flex ease-in 1s;
+  -ms-transition: flex ease-in 1s;
+  -o-transition: flex ease-in 1s;
+}
+.panel:nth-child(1) {
+  background-image: url("img/1.jpg");
+}
+.panel:nth-child(2) {
+  background-image: url("img/2.jpeg");
+}
+.panel:nth-child(3) {
+  background-image: url("img/3.jpeg");
+}
+.panel:nth-child(4) {
+  background-image: url("img/4.jpeg");
+}
+.panel:nth-child(5) {
+  background-image: url("img/5.jpeg");
+}
+
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  .panel:nth-last-of-type(1),
+  .panel:nth-last-of-type(2) {
+    display: none;
+  }
+  .container {
+    width: 100vh;
+  }
+}
