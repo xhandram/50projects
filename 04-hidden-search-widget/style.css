@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fcfcfc;
+  --text-color: #040404;
+  --primary-color: #eca5e1;
+  --secondary-color: rgb(7, 68, 182);
+  --default-font-size: 16px;
+  --font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--default-font-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #021835;
+  stroke-width: 3px;
+}
+
+.inline-search {
+  position: relative;
+  height: 40px;
+}
+
+input {
+  box-sizing: border-box;
+  border: 0;
+  height: 100%;
+  background-color: #fafafa;
+  width: 40px;
+  padding: 5px;
+  transition: width 0.3s ease-in;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.large {
+  width: 240px;
+}
