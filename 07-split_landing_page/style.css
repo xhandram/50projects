@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fcfcfc;
+  --text-color: #040404;
+  --primary-color: #040404;
+  --secondary-color: purple;
+  --default-font-size: 16px;
+  --font-family: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--default-font-size);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.container > div {
+  flex: 50%;
+  transition: flex 0.5s ease-in;
+}
+
+.princess-team {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 40, 145, 0.8),
+      rgba(133, 2, 67, 0.63)
+    ),
+    url("img/princess.jpg");
+  background-size: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.title {
+  color: white;
+  font-size: 35px;
+}
+
+.princess-team:hover {
+  flex: 90%;
+}
+
+.btn {
+  border: 3px solid white;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+.villains-team:hover {
+  flex: 90%;
+  display: flex;
+  width: 80%;
+}
+
+.villains-team {
+  background-color: black;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(31, 30, 30, 0.918),
+      rgba(22, 2, 12, 0.945)
+    ),
+    url("img/villains.jpg");
+  background-size: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+}
